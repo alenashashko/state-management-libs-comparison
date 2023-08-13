@@ -1,8 +1,8 @@
-import { CounterBody } from './components/CounterBody/CounterBody'
-import { DecreaseCountButton } from './components/DecreaseCountButton/DecreaseCountButton'
-import { IncreaseCountButton } from './components/IncreaseCountButton/IncreaseCountButton'
+import { CounterBody } from './components/CounterBody/CounterBody';
+import { DecreaseCountButton } from './components/DecreaseCountButton/DecreaseCountButton';
+import { IncreaseCountButton } from './components/IncreaseCountButton/IncreaseCountButton';
 
-export function App() {
+export const App = () => {
   return (
     <div>
       <IncreaseCountButton />
@@ -10,4 +10,4 @@ export function App() {
       <DecreaseCountButton />
     </div>
   )
-}
+};

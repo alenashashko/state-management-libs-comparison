@@ -3,6 +3,6 @@ export type Action = {
 };
 
 export enum ActionType {
-  IncreaseCounter = "INCREASE_COUNTER",
-  DecreaseCounter = "DECREASE_COUNTER"
+  IncreaseCounter = 'INCREASE_COUNTER',
+  DecreaseCounter = 'DECREASE_COUNTER'
 }

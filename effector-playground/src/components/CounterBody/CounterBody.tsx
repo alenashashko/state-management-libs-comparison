@@ -1,4 +1,5 @@
 import { useStore } from 'effector-react';
+
 import { $counterStore } from '../../store/store';
 
 export const CounterBody = () => {

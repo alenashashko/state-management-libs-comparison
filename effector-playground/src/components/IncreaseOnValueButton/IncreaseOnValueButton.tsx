@@ -1,7 +1,11 @@
-import { increaseOnValue } from "../../store/store";
+import { increaseOnValue } from '../../store/store';
 
-export const IncreaseOnValueButton = () => {
+type Props = {
+  value: number;
+};
+
+export const IncreaseOnValueButton = ({ value }: Props) => {
   return (
-    <button onClick={() => increaseOnValue(5)}>+5</button>
+    <button onClick={() => increaseOnValue(value)}>{`+${value}`}</button>
   );
 };

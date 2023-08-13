@@ -1,4 +1,4 @@
-import { increaseCounter } from "../../store/store";
+import { increaseCounter } from '../../store/store';
 
 export const IncreaseCountButton = () => {
   return (

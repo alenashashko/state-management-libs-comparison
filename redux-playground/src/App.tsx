@@ -1,13 +1,13 @@
-import { ChangeCountButton } from './components/ChangeCountButton/ChangeCountButton';
 import { CounterBody } from './components/CounterBody/CounterBody';
-import { ActionType } from './store/types';
+import { DecreaseCountButton } from './components/DecreaseCountButton/DecreaseCountButton';
+import { IncreaseCountButton } from './components/IncreaseCountButton/IncreaseCountButton';
 
-export function App() {
+export const App = () => {
   return (
     <div>
-      <ChangeCountButton action={ActionType.IncreaseCounter} />
+      <IncreaseCountButton />
       <CounterBody />
-      <ChangeCountButton action={ActionType.DecreaseCounter} />
+      <DecreaseCountButton />
     </div>
   )
 }

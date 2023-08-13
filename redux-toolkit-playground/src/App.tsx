@@ -1,14 +1,13 @@
-import { ChangeCountButton } from "./features/counter/components/ChangeCountButton";
-import { CounterBody } from "./features/counter/components/CounterBody";
-import { ActionType } from "./types";
+import { DecreaseCountButton } from './features/counter/components/DecreaseCountButton';
+import { CounterBody } from './features/counter/components/CounterBody';
+import { IncreaseCountButton } from './features/counter/components/IncreaseCountButton';
 
-export function App() {
+export const App = () => {
   return (
     <div>
-      <ChangeCountButton action={ActionType.IncreaseCounter} />
+      <IncreaseCountButton />
       <CounterBody />
-      <ChangeCountButton action={ActionType.DecreaseCounter} />
+      <DecreaseCountButton />
     </div>
   )
-}
-
+};

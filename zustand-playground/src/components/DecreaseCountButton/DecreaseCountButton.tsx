@@ -1,4 +1,4 @@
-import { useCounterStore } from "../../store/store";
+import { useCounterStore } from '../../store/store';
 
 export const DecreaseCountButton = () => {
   const decreaseCounterValue = useCounterStore(state => state.decreaseCounterValue);

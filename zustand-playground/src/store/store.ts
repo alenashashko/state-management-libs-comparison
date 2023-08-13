@@ -13,5 +13,5 @@ export const useCounterStore = create<CounterState>((set) => ({
   })),
   decreaseCounterValue: () => set(state => ({
     count: state.count - 1,
-  }))
+  })),
 }));
