@@ -1,4 +1,5 @@
-import { makeAutoObservable } from 'mobx';
+import { makeAutoObservable, runInAction } from 'mobx';
+import { fakeRequest } from '../units/fakeRequest';
 
 export const state = makeAutoObservable({
   count: 0,
@@ -7,7 +8,14 @@ export const state = makeAutoObservable({
   },
   decreaseCount() {
     this.count--;
-  }
+  },
+  async fetchRandomCount() {
+    const count = await fakeRequest();
+
+    runInAction(() => {
+      this.count = count;
+    });
+  },
 }, {}, {
   autoBind: true,
 });

@@ -1,4 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+
+import { fakeRequest } from '../../utils/fakeRequest';
+
+export const fetchRandomCountValue = createAsyncThunk('counter/fetchRandomCountValue', async () => {
+  const count = await fakeRequest();
+
+  return count;
+});
 
 export const counterSlice = createSlice({
   name: 'counter',
@@ -12,6 +20,11 @@ export const counterSlice = createSlice({
     decrement: (state) => {
       state.value -= 1;
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchRandomCountValue.fulfilled, (state, action) => {
+      state.value = action.payload;
+    });
   },
 });
 

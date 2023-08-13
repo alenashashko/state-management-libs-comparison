@@ -1,9 +1,9 @@
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '../../../app/store';
 
 import { increment } from '../counterSlice';
 
 export const IncreaseCountButton = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   return (
     <button onClick={() => dispatch(increment())}>+</button>
