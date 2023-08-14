@@ -1,11 +1,12 @@
-import { useAppDispatch } from '../../../app/store';
+import { Button } from '@chakra-ui/react';
 
+import { useAppDispatch } from '../../../app/store';
 import { increment } from '../counterSlice';
 
 export const IncreaseCountButton = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <button onClick={() => dispatch(increment())}>+</button>
+    <Button width="100%" onClick={() => dispatch(increment())}>+</Button>
   );
 };

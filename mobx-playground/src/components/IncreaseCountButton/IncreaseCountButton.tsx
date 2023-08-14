@@ -1,9 +1,10 @@
+import { Button } from '@chakra-ui/react';
 import { observer } from 'mobx-react-lite';
 
 import { state } from '../../store/store';
 
 export const IncreaseCountButton = observer(() => {
   return (
-    <button onClick={state.increaseCount}>+</button>
+    <Button width="100%" onClick={state.increaseCount}>+</Button>
   );
 });

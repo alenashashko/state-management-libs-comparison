@@ -1,5 +1,6 @@
 import { ConnectedProps, connect } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
+import { Button } from '@chakra-ui/react';
 
 import { Action } from '../../store/types';
 import { StoreDispatch } from '../../store/store';
@@ -12,7 +13,7 @@ const mapDispatchToProps = (dispatch: ThunkDispatch<StoreDispatch, void, Action>
 });
 
 const SetRandomCountButtonView = ({ setRandomValue } : Props) => {
-  return <button onClick={setRandomValue}>load random value</button>
+  return <Button width="100%" onClick={setRandomValue}>Load random value</Button>
 };
 
 const connector = connect(null, mapDispatchToProps);

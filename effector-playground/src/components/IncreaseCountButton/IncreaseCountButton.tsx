@@ -1,7 +1,9 @@
+import { Button } from '@chakra-ui/react';
+
 import { increaseCounter } from '../../store/store';
 
 export const IncreaseCountButton = () => {
   return (
-    <button onClick={() => increaseCounter()}>+</button>
+    <Button width="100%" onClick={() => increaseCounter()}>+</Button>
   );
 };

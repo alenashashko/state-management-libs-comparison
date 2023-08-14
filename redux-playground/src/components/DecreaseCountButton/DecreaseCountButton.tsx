@@ -1,4 +1,5 @@
 import { ConnectedProps, connect } from 'react-redux';
+import { Button } from '@chakra-ui/react';
 
 import { StoreDispatch } from '../../store/store';
 import { decreaseCounterValue } from '../../store/actions';
@@ -11,7 +12,7 @@ const mapDispatchToProps = (dispatch: StoreDispatch) => ({
 
 const DecreaseCountButtonView = ({ decreaseCount } : Props) => {
   return (
-    <button onClick={decreaseCount}>-</button>
+    <Button width="100%" onClick={decreaseCount}>-</Button>
   );
 };
 

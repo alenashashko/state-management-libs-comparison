@@ -1,4 +1,5 @@
 import { useSetRecoilState } from 'recoil';
+import { Button } from '@chakra-ui/react';
 
 import { counterState } from '../../store/store';
 import { fakeRequest } from '../../utils/fakeRequest';
@@ -12,5 +13,5 @@ export const SetRandomCountButton = () => {
     setCount(count);
   };
   
-  return <button onClick={onButtonClick}>load random value</button>
+  return <Button width="100%" onClick={onButtonClick}>Load random value</Button>;
 };

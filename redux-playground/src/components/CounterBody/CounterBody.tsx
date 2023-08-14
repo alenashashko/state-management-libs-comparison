@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { Input } from '@chakra-ui/react';
 
 import { CounterState } from '../../store/reducer';
 
@@ -11,7 +12,7 @@ type Props = {
 };
 
 const CounterBodyView = ({count}: Props) => {
-  return <div>{count}</div>;
+  return <Input value={count} readOnly={true} />;
 }
 
 export const CounterBody = connect(mapStateToProps, null)(CounterBodyView);
